@@ -1,0 +1,33 @@
+# IFS internal file type for star catalogues, version 10000.10001.3
+# File layout:
+# Header:
+# Data type:    Comment / Value:
+int32           10000 - Magic number
+int32           10001 - Magic number/reserved
+int32           3 - Magic Number/reserved
+int32           Star DB type (currently only 1 supported in starsdb)
+int32           Catalogue name length [1-127]
+char[1-127]     Catalogue name
+int32           10000 - Magic number/reserved
+int32           Number of stars (ns)
+
+# Data section - Vectors of length ns (number of stars)
+# Data type:    Comment / Value:
+int64[ns]       Catalogue number
+double[ns]      Right Ascension (RA)
+double[ns]      Declination (DEC)
+double[ns]      RA epoch
+double[ns]      DEC epoch
+double[ns]      RA sigma
+double[ns]      DEC sigma
+double[ns]      RA Proper Motion [pm]
+double[ns]      DEC Proper Motion [pm]
+double[ns]      RA pm sigma
+double[ns]      DEC pm sigma
+double[ns]      Parallax
+int64[ns]       DM_number
+double          Visual magnitude
+char[4]         Spectral Type
+
+
+See decoding/encoding of the spectral type in SpicePP/Stars
