@@ -31,6 +31,4 @@ make
 Executable will be placed in bin/
 
 For info on usage:
-'''
-starsdb -h
-'''
+'''starsdb -h'''
