@@ -26,8 +26,8 @@ double[ns]      RA pm sigma
 double[ns]      DEC pm sigma
 double[ns]      Parallax
 int64[ns]       DM_number
-double          Visual magnitude
-char[4]         Spectral Type
+doublei[ns]     Visual magnitude
+char[4][ns]     Spectral Type
 
 
 See decoding/encoding of the spectral type in SpicePP/Stars
