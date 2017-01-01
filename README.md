@@ -11,12 +11,18 @@ starsdb now has the following minimal features:
 
 How to get the star catalogues from NIAF:
 * navigate or use wget from 
-'''http://naif.jpl.nasa.gov/pub/naif/generic_kernels/stars/'''
+```
+http://naif.jpl.nasa.gov/pub/naif/generic_kernels/stars/
+```
 * The Hipparcos catalogue has about 117.000 stars and should be sufficient for most uses
 * unzip the transfer file (xdb):
-'''gzip -d hipparcos.xdb.Z'''
+```
+gzip -d hipparcos.xdb.Z
+```
 * Convert to binary E-kernel format with Spice's "tobin":
-'''tobin hipparcos.xdb hipparcos.bdb'''
+```
+tobin hipparcos.xdb hipparcos.bdb
+```
 
 The bdb files can then be read by this app.
 
@@ -31,4 +37,7 @@ make
 Executable will be placed in bin/
 
 For info on usage:
-'''starsdb -h'''
+```
+starsdb -h
+```
+
